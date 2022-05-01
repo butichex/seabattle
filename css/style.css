@@ -3,8 +3,12 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 /* ЧАСТО ИСПОЛЬЗУЕМЫЕ ПЕРЕМЕННЫЕ */
 /* ЧАСТО ИСПОЛЬЗУЕМЫЕ ПЕРЕМЕННЫЕ */
+.cell-white {
+  background: white;
+}
+
 :root {
-  --ggs: 2;
+  --ggs: 1;
 }
 
 .container {
@@ -36,7 +40,8 @@ img {
 /* HEADER */
 .header {
   width: 100%;
-  height: 11.25rem;
+  height: 6.25rem;
+  border-bottom: 1px solid #5F5F5F;
 }
 
 .header__inner {
@@ -47,30 +52,123 @@ img {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  gap: 3rem;
 }
 
 .header__logo {
   width: 160px;
 }
 
-/* HEADER */
-/* SECTIONS */
-.select-game {
-  margin: 6rem 0px 0px 0px;
-}
-
-.select-game__cards {
+.header__status {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 2rem;
+  gap: 0.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.select-game__title {
-  margin: 0px 0px 1rem 0px;
+.header__status .status__signal {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100vw;
+  background-color: #50B141;
+}
+
+.header__status .status__gamers-count {
+  font-size: 0.8rem;
+}
+
+/* HEADER */
+/* SECTIONS */
+.game-status {
+  margin: 2rem 0px 0px 0px;
+}
+
+.game-status__text {
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: 0.625rem 0.875rem;
+  background: #343434;
+}
+
+.select-game {
+  margin: 4rem 0px 0px 0px;
+}
+
+.select-game__panel {
+  background-color: #343434;
+  border-radius: 0.9375rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.select-game .panel__item {
+  border-radius: 0.9375rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.select-game .panel__item:nth-child(1) {
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.9375rem 0px 0px 0.9375rem;
+}
+
+.select-game .panel__item:nth-child(2) {
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0px;
+}
+
+.select-game .panel__item:nth-child(3) {
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0px 0.9375rem 0.9375rem 0px;
+}
+
+.select-game .panel__item:hover {
+  cursor: pointer;
+  background-color: #404040;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+.game-field__inner {
+  margin: 1rem 0px 0px 0px;
+  width: 300px;
+  height: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+}
+
+.game-field__cell {
+  border: 1px solid gray;
+}
+
+.game-field__cell:nth-child(1) {
+  border-radius: 0.9375rem 0px 0px 0px;
+}
+
+.game-field__cell:nth-child(100) {
+  border-radius: 0px 0px 0.9375rem 0px;
+}
+
+.game-field__cell:nth-child(10) {
+  border-radius: 0px 0.9375rem 0px 0px;
+}
+
+.game-field__cell:nth-child(91) {
+  border-radius: 0px 0px 0px 0.9375rem;
 }
 
 /* SECTIONS */
