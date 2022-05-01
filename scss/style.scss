@@ -12,8 +12,12 @@
 /* ЧАСТО ИСПОЛЬЗУЕМЫЕ ПЕРЕМЕННЫЕ */
 
 
+.cell-white {
+    background: white;
+}
+
 :root {
-    --ggs: 2;
+    --ggs: 1;
 }
 
 
@@ -58,18 +62,40 @@ img {
 
 .header {
     width : 100%;
-    height: rem(180);
+    height: rem(100);
+    border-bottom: 1px solid #5F5F5F;
 
     &__inner {
         display    : flex;
         align-items: center;
         height     : 100%;
+        gap: 3rem;
     }
 
 
 
     &__logo {
         width: 160px;
+    }
+
+
+    &__status {
+        display: flex;
+        gap: rem(10);
+        align-items: center;
+        .status {
+
+            &__signal {
+                width: rem(10);
+                height: rem(10);
+                border-radius: 100vw;
+                background-color: #50B141;
+            }
+
+            &__gamers-count {
+                font-size: 0.8rem;
+            }
+        }
     }
 }
 
@@ -80,25 +106,107 @@ img {
 
 /* SECTIONS */
 
+
+
+.game-status {
+    margin: 2rem 0px 0px 0px;
+    &__inner {}
+
+    &__text {
+        display: inline-block;
+        padding: rem(12);
+        border-radius: rem(10) rem(14);
+        background: #343434;
+    }
+}
+
 .select-game {
-    margin: 6rem 0px 0px 0px;
-    &__cards {
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
+    margin: 4rem 0px 0px 0px;
+    &__panel {
+        background-color: #343434;
+        border-radius   : rem(15);
+        display         : inline-flex;
 
     }
 
-    &__card {}
+
+    .panel {
+        &__item {
+            border-radius: rem(15);
+            padding      : 1rem;
+            display      : flex;
+            align-items  : center;
+            gap          : 1rem;
+
+            .item {
+                &__name {}
 
 
+                &__icon {}
+            }
+        }
 
-    &__title {
-        margin: 0px 0px 1rem 0px;
+        &__item:nth-child(1) {
+            padding      : 1rem 2rem 1rem 2rem;
+            border-radius: rem(15) 0px 0px rem(15);
+        }
+
+        &__item:nth-child(2) {
+            padding: 1rem 2rem 1rem 2rem;
+
+            border-radius: 0px;
+        }
+
+        &__item:nth-child(3) {
+            padding: 1rem 2rem 1rem 2rem;
+
+            border-radius: 0px rem(15) rem(15) 0px;
+        }
+
+
+        &__item:hover {
+            cursor          : pointer;
+            background-color: #404040;
+            transition      : background-color 0.5s linear;
+        }
     }
 
 }
 
+
+
+.game-field {
+    &__inner {
+        margin               : 1rem 0px 0px 0px;
+        width                : 300px;
+        height               : 300px;
+        display              : grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows   : repeat(10, 1fr);
+    }
+
+
+    &__cell {
+        border: 1px solid gray;
+    }
+
+
+    &__cell:nth-child(1) {
+        border-radius: rem(15) 0px 0px 0px;
+    }
+
+    &__cell:nth-child(100) {
+        border-radius: 0px 0px rem(15) 0px;
+    }
+
+    &__cell:nth-child(10) {
+        border-radius: 0px rem(15) 0px 0px;
+    }
+
+    &__cell:nth-child(91) {
+        border-radius: 0px 0px 0px rem(15);
+    }
+}
 
 /* SECTIONS */
 
@@ -111,35 +219,35 @@ img {
 
 .card {
     cursor: pointer;
-    flex      : 1 0 25%;
+    flex  : 1 0 25%;
 
-    height: 300px;
+    height          : 300px;
     background-color: #343434;
-    border-radius: 15px;
-    padding: rem(20);
-    position: relative;
-    
+    border-radius   : 15px;
+    padding         : rem(20);
+    position        : relative;
+
 
     &__title {
         position: absolute;
-        top: 280px;
-        left: rem(25);
+        top     : 280px;
+        left    : rem(25);
 
     }
 
 
     &__icon {
         position: absolute;
-        top: 5%;
-        left: rem(20);
+        top     : 5%;
+        left    : rem(20);
 
     }
 }
 
 
 .card:hover {
-    border: solid 1px gray;
-    transition: border ease-in-out 1s; 
+    border    : solid 1px gray;
+    transition: border ease-in-out 1s;
 }
 
 
@@ -148,4 +256,3 @@ img {
     font-weight: 600;
     font-size  : rem(20);
 }
-

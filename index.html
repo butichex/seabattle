@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://css.gg/css?=|arrows-exchange|laptop|link|" rel="stylesheet">
-
-    <title>Furnitur.</title>
+    <title>Морской бой | Seabattle</title>
 </head>
 
 <body>
@@ -18,29 +17,43 @@
             <a href="" class="header__logo-link">
                 <img src="./img/logo.svg" alt="" class="header__logo">
             </a>
+            <div class="header__status">
+                <div class="status__signal"></div>
+                <p class="status__gamers-count">36 игроков онлайн</p>
+            </div>
         </div>
     </header>
     <main class="main">
         <section class="select-game">
             <div class="select-game__inner container">
-                <p class="select-game__title title">Выберите тип игры</p>
-                <div class="select-game__cards">
-                    <div class="select-game__card card">
-                        <div class="card__icon icon gg-link"></div>
-                        <p class="card__title title">Игра с <br> другом</p>
-                    </div>
-                    <div class="select-game__card card">
-                        <div class="card__icon icon gg-arrows-exchange"></div>
-                        <p class="card__title title">Игра со <br> случайным игроком</p>
-                    </div>
-                    <div class="select-game__card card">
-                        <div class="card__icon icon gg-laptop"></div>
-                        <p class="card__title title">Игра с <br> компьютером</p>
-                    </div>
-                </div>
+                <ul class="select-game__panel">
+                    <li class="panel__item">
+                        <div class="item__icon gg-arrows-exchange"></div>
+                        <p class="item__name">Игра с<br>другом</p>
+                    </li>
+                    <li class="panel__item">
+                        <div class="item__icon gg-laptop"></div>
+                        <p class="item__name">Игра со<br>случайным игроком</p>
+                    </li>
+                    <li class="panel__item">
+                        <div class="item__icon gg-link"></div>
+                        <p class="item__name">Игра с<br>компьютером</p>
+                    </li>
+
+                </ul>
             </div>
+            <section class="game-status">
+                <div class="game-status__inner container">
+                    <p class="game-status__text">Разместите корабли...</p>
+                </div>
+            </section>
+            <section class="game-field container">
+                <div class="game-field__inner">
+                </div>
+            </section>
         </section>
     </main>
+    <script src="./js/game.js" class="bgbgbgbgbgbgbggbgbgbgbgbgbgbgbgbggbgbgbgbgbgbgbgbgbgbgbgbgbgbgbgbgbggbgbgbgbgbgbgbgbggbgbgbgbgbgbgbgbgggbgbgbggbgbggbggbgbgbgggbgbgbgbggbgbgbgbg"></script>
 </body>
 
 </html>
