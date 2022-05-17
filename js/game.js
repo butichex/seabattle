@@ -1,4 +1,4 @@
-const M = N = 10;
+/* const M = N = 10;
 
 
 let gameField = document.querySelector(".game-field");
@@ -36,5 +36,8 @@ gameField = initGameField();
 fillShips(gameField); 
 
 
+
+
+ */
 
 
